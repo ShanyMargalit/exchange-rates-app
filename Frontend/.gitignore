@@ -1,0 +1,15 @@
+# Dependency directory
+node_modules/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Editor directories and files
+.vscode/
