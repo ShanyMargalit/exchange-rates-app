@@ -1,0 +1,58 @@
+   body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('/src/assets/background.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .select-container {
+    margin-bottom: 20px;
+  }
+  
+  .table-container {
+    margin-top: 20px;
+  }
+  
+  .table th, .table td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  
+  .table th {
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .table img {
+    width: 20px;
+    margin-right: 10px;
+  }
+  
+  .sort-icon {
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  
+  .sortable-header {
+    display: flex;
+    align-items: center;
+  }
+  

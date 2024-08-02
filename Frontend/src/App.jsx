@@ -1,17 +1,19 @@
-import { useState } from 'react'
-import './App.css'
-
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import ExchangeRateTable from './components/ExchangeRateTable.jsx';
+import './App.css';
 
+const theme = createTheme({
+  spacing: 8,
+});
 
 function App() {
 
   return (
-    <>
-      <h1>Welcome to exchange rates app</h1>
+    <ThemeProvider theme={theme}>
+      <h1>Currency Exchange Rates</h1>
       <ExchangeRateTable />
-    </>
-  )
+    </ThemeProvider>
+  );
 }
 
 export default App;
