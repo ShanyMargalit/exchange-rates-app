@@ -1,6 +1,9 @@
 ﻿
 namespace ExchangeRatesAPI.BL.Services;
 
+/// <summary>
+/// Service for handling currency operations.
+/// </summary>
 public class CurrencyService : ICurrencyService
 {
     private readonly ICurrencyRepository _currencyRepository;
@@ -21,7 +24,14 @@ public class CurrencyService : ICurrencyService
     /// <returns>A dictionary containing the exchange rates with other currencies.</returns>
     public async Task<Dictionary<string, double>> GetExchangeRatesAsync(string baseCurrency)
     {
-        return await _currencyRepository.GetExchangeRatesAsync(baseCurrency);
+        var currenciesQuery = string.Join(",", await _currencyRepository.GetAvailableCurrenciesAsync());
+        var rawData = await _currencyRepository.GetRawExchangeRatesAsync(currenciesQuery);
+
+        var rates = rawData
+            .Where(kv => kv.Key != baseCurrency)
+            .ToDictionary(kv => kv.Key, kv => kv.Value / rawData[baseCurrency]);
+
+        return rates;
     }
 
     /// <summary>

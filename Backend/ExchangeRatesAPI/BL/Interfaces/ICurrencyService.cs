@@ -1,9 +1,6 @@
 ﻿
 namespace ExchangeRatesAPI.BL.Interfaces;
 
-/// <summary>
-/// Interface for currency service, defining the methods required for currency operations.
-/// </summary>
 public interface ICurrencyService
 {
     /// <summary>

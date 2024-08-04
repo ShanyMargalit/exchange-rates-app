@@ -21,21 +21,15 @@ public class CurrencyRepository : ICurrencyRepository
     }
 
     /// <summary>
-    /// Gets the exchange rates for a given base currency.
+    /// Gets the raw exchange rates data from the API.
     /// </summary>
-    /// <param name="baseCurrency">The base currency short name.</param>
-    /// <returns>A dictionary containing the exchange rates with other currencies.</returns>
-    public async Task<Dictionary<string, double>> GetExchangeRatesAsync(string baseCurrency)
+    /// <param name="currenciesQuery">The query string containing the list of currencies.</param>
+    /// <returns>A dictionary containing the raw exchange rates data.</returns>
+    public async Task<Dictionary<string, double>> GetRawExchangeRatesAsync(string currenciesQuery)
     {
-        var currenciesQuery = string.Join(",", Currencies);
         var response = await _httpClient.GetStringAsync($"{BaseUrl}?apikey={ApiKey}&currencies={currenciesQuery}");
         var data = JsonConvert.DeserializeObject<ApiResponse>(response);
-
-        var rates = Currencies
-        .Where(currency => currency != baseCurrency && data.Data.TryGetValue(currency, out var rate))
-        .ToDictionary(currency => currency, currency => data.Data[currency] / data.Data[baseCurrency]);
-
-        return rates;
+        return data.Data;
     }
 
     /// <summary>

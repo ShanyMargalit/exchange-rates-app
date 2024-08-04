@@ -4,11 +4,11 @@ namespace ExchangeRatesAPI.DAL.Interfaces;
 public interface ICurrencyRepository
 {
     /// <summary>
-    /// Gets the exchange rates for a given base currency.
+    /// Gets the raw exchange rates data from the API.
     /// </summary>
-    /// <param name="baseCurrency">The base currency short name.</param>
-    /// <returns>A dictionary containing the exchange rates with other currencies.</returns>
-    Task<Dictionary<string, double>> GetExchangeRatesAsync(string baseCurrency);
+    /// <param name="currenciesQuery">The query string containing the list of currencies.</param>
+    /// <returns>A dictionary containing the raw exchange rates data.</returns>
+    Task<Dictionary<string, double>> GetRawExchangeRatesAsync(string currenciesQuery);
 
     /// <summary>
     /// Gets the list of available currencies.
