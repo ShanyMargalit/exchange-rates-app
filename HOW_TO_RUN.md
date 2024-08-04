@@ -5,6 +5,12 @@
 1. Node.js and npm: [Install Node.js](https://nodejs.org/)
 2. .NET SDK: [Install .NET SDK](https://dotnet.microsoft.com/download)
 
+
+## Note:
+
+After cloning the project, make sure to navigate to the project's root directory before following the steps below.
+
+
 ## Backend (ASP.NET Core)
 
 1. Navigate to the backend project directory:
@@ -19,10 +25,10 @@
 
 3. Run the backend API:
     ```bash
-    dotnet run
+    dotnet run --launch-profile https
     ```
 
-   The API will run on `http://localhost:5000` by default.
+   The API will run on `https://localhost:7061` by default.
 
 ## Frontend (React with Vite)
 
@@ -33,7 +39,7 @@
 
 2. Install the dependencies:
     ```bash
-    npm install
+    npm install --legacy-peer-deps
     ```
 
 3. Run the development server:
