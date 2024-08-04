@@ -55,4 +55,17 @@
     display: flex;
     align-items: center;
   }
+
+  .table th {
+    cursor: text;
+  }
+  
+  .table th.sortable:hover {
+    cursor: pointer;
+  }
+  
+  .table td {
+    cursor: text;
+  }
+  
   

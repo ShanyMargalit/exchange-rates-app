@@ -25,6 +25,13 @@ const currencyImages = {
   ILS: '/src/assets/ils.png',
 };
 
+// Define base URL as a constant and immutable variable
+const BASE_URL = 'https://localhost:7061/api/ExchangeRate';
+
+/*
+Component for displaying exchange rates.
+Fetches currency data and exchange rates from the backend and displays them in a table.
+ */
 const ExchangeRateTable = () => {
   const [baseCurrency, setBaseCurrency] = useState('USD');
   const [currencies, setCurrencies] = useState([]);
@@ -33,9 +40,12 @@ const ExchangeRateTable = () => {
   const [orderDirectionRate, setOrderDirectionRate] = useState('desc');
   const [orderDirectionTarget, setOrderDirectionTarget] = useState('asc');
 
+  /*
+  Fetches available currencies from the backend API.
+   */
   useEffect(() => {
     axios
-      .get('https://localhost:7061/api/ExchangeRate/currencies')
+      .get(`${BASE_URL}/currencies`)
       .then((response) => {
         if (Array.isArray(response.data)) {
           setCurrencies(response.data);
@@ -46,10 +56,13 @@ const ExchangeRateTable = () => {
       .catch((error) => console.error('Error fetching currencies:', error));
   }, []);
 
+  /*
+  Fetches exchange rates for the selected base currency from the backend API.
+  */
   useEffect(() => {
     if (baseCurrency) {
       axios
-        .get(`https://localhost:7061/api/ExchangeRate/exchange-rates?baseCurrency=${baseCurrency}`)
+        .get(`${BASE_URL}/exchange-rates?baseCurrency=${baseCurrency}`)
         .then((response) => {
           if (response.data) {
             setExchangeRates(response.data);
@@ -112,7 +125,7 @@ const ExchangeRateTable = () => {
             <TableHead>
               <TableRow>
                 <TableCell>Base</TableCell>
-                <TableCell onClick={() => handleSort('target')}>
+                <TableCell onClick={() => handleSort('target')} className="sortable">
                   Target
                   {orderBy === 'target' && orderDirectionTarget === 'asc' ? (
                     <ArrowUpward fontSize="small" className="sort-icon" />
@@ -120,7 +133,7 @@ const ExchangeRateTable = () => {
                     <ArrowDownward fontSize="small" className="sort-icon" />
                   )}
                 </TableCell>
-                <TableCell onClick={() => handleSort('rate')}>
+                <TableCell onClick={() => handleSort('rate')} className="sortable">
                   Exchange Rate
                   {orderBy === 'rate' && orderDirectionRate === 'asc' ? (
                     <ArrowUpward fontSize="small" className="sort-icon" />
