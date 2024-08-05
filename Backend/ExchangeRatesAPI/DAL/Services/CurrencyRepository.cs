@@ -28,7 +28,7 @@ public class CurrencyRepository : ICurrencyRepository
     public async Task<Dictionary<string, double>> GetRawExchangeRatesAsync(string currenciesQuery)
     {
         var response = await _httpClient.GetStringAsync($"{BaseUrl}?apikey={ApiKey}&currencies={currenciesQuery}");
-        var data = JsonConvert.DeserializeObject<ApiResponse>(response);
+        var data = JsonConvert.DeserializeObject<ApiResponse>(response); 
         return data.Data;
     }
 
