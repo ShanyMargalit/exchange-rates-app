@@ -5,11 +5,17 @@
 1. Node.js and npm: [Install Node.js](https://nodejs.org/)
 2. .NET SDK: [Install .NET SDK](https://dotnet.microsoft.com/download)
 
+## Cloning the Repository
 
-## Note:
-
-After cloning the project, make sure to navigate to the project's root directory before following the steps below.
-
+1. Clone the project repository:
+    ```bash
+    git clone https://github.com/ShanyMargalit/exchange-rates-app.git
+    ```
+   
+2. Navigate to the project's root directory:
+    ```bash
+    cd exchange-rates-app
+    ```
 
 ## Backend (ASP.NET Core)
 
