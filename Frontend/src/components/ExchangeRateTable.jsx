@@ -74,6 +74,11 @@ const ExchangeRateTable = () => {
     }
   }, [baseCurrency]);
 
+  /**
+   * Handles sorting of the table columns.
+   * Sets the sorting direction and the property to sort by.
+   * @param {string} property - The property to sort by ('rate' or 'target').
+   */
   const handleSort = (property) => {
     if (property === 'rate') {
       const isAsc = orderBy === property && orderDirectionRate === 'asc';
@@ -85,6 +90,10 @@ const ExchangeRateTable = () => {
     setOrderBy(property);
   };
 
+  /**
+   * Prepares and sorts the exchange rate data based on the selected order.
+   * @returns {Array} The sorted exchange rate data.
+   */
   const sortedData = Object.keys(exchangeRates)
     .filter((targetCurrency) => targetCurrency !== baseCurrency)
     .map((targetCurrency) => ({
