@@ -29,6 +29,7 @@
   
   .table-container {
     margin-top: 20px;
+    height: 188px;
   }
   
   .table th, .table td {
@@ -67,5 +68,4 @@
   .table td {
     cursor: text;
   }
-  
   
