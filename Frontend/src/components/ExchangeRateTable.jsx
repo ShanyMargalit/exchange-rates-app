@@ -25,8 +25,13 @@ const currencyData = {
   ILS: { img: '/src/assets/ils.png', caption: 'Israeli Shekel' },
 };
 
+// Define base URL as a constant and immutable variable
 const BASE_URL = 'https://localhost:7061/api/ExchangeRate';
 
+/*
+Component for displaying exchange rates.
+Fetches currency data and exchange rates from the backend and displays them in a table.
+ */
 const ExchangeRateTable = () => {
   const [baseCurrency, setBaseCurrency] = useState('');
   const [currencies, setCurrencies] = useState([]);
@@ -36,6 +41,9 @@ const ExchangeRateTable = () => {
   const [orderDirectionRate, setOrderDirectionRate] = useState('desc');
   const [orderDirectionTarget, setOrderDirectionTarget] = useState('asc');
 
+  /*
+  Fetches available currencies from the backend API.
+   */
   useEffect(() => {
     axios
       .get(`${BASE_URL}/currencies`)
@@ -49,6 +57,9 @@ const ExchangeRateTable = () => {
       .catch((error) => console.error('Error fetching currencies:', error));
   }, []);
 
+  /*
+  Fetches exchange rates for the selected base currency from the backend API.
+  */
   useEffect(() => {
     if (baseCurrency) {
       setLoading(true);
@@ -66,6 +77,11 @@ const ExchangeRateTable = () => {
     }
   }, [baseCurrency]);
 
+  /**
+   * Handles sorting of the table columns.
+   * Sets the sorting direction and the property to sort by.
+   * @param {string} property - The property to sort by ('rate' or 'target').
+   */
   const handleSort = (property) => {
     if (property === 'rate') {
       const isAsc = orderBy === property && orderDirectionRate === 'asc';
@@ -77,6 +93,10 @@ const ExchangeRateTable = () => {
     setOrderBy(property);
   };
 
+  /**
+   * Prepares and sorts the exchange rate data based on the selected order.
+   * @returns {Array} The sorted exchange rate data.
+   */
   const sortedData = Object.keys(exchangeRates)
     .filter((targetCurrency) => targetCurrency !== baseCurrency)
     .map((targetCurrency) => ({
