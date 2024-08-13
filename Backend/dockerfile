@@ -1,0 +1,12 @@
+# Use the official .NET 8.0 runtime image to run the application
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+
+# Copy the published output
+COPY out .
+
+# Expose the port the app runs on
+EXPOSE 7061
+
+# Set the entry point for the application
+ENTRYPOINT ["dotnet", "ExchangeRatesAPI.dll"]

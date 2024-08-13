@@ -1,0 +1,8 @@
+C:\Users\nati8\OneDrive\שולחן העבודה\ExchangeRates_Algoritech\exchange-rates-app\backend\out\ExchangeRatesAPI.exe
+C:\Users\nati8\OneDrive\שולחן העבודה\ExchangeRates_Algoritech\exchange-rates-app\backend\out\appsettings.Development.json
+C:\Users\nati8\OneDrive\שולחן העבודה\ExchangeRates_Algoritech\exchange-rates-app\backend\out\appsettings.json
+C:\Users\nati8\OneDrive\שולחן העבודה\ExchangeRates_Algoritech\exchange-rates-app\backend\out\ExchangeRatesAPI.dll
+C:\Users\nati8\OneDrive\שולחן העבודה\ExchangeRates_Algoritech\exchange-rates-app\backend\out\ExchangeRatesAPI.deps.json
+C:\Users\nati8\OneDrive\שולחן העבודה\ExchangeRates_Algoritech\exchange-rates-app\backend\out\ExchangeRatesAPI.runtimeconfig.json
+C:\Users\nati8\OneDrive\שולחן העבודה\ExchangeRates_Algoritech\exchange-rates-app\backend\out\ExchangeRatesAPI.pdb
+C:\Users\nati8\OneDrive\שולחן העבודה\ExchangeRates_Algoritech\exchange-rates-app\backend\out\Newtonsoft.Json.dll

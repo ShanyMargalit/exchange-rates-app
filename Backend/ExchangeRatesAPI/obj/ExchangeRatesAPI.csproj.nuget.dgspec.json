@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nati8\\OneDrive\\שולחן העבודה\\ExchangeRates_Algoritech\\exchange-rates-app\\Backend\\ExchangeRatesAPI\\ExchangeRatesAPI.csproj": {}
+    "C:\\Users\\nati8\\שולחן העבודה\\ExchangeRates_Algoritech\\exchange-rates-app\\Backend\\ExchangeRatesAPI\\ExchangeRatesAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nati8\\OneDrive\\שולחן העבודה\\ExchangeRates_Algoritech\\exchange-rates-app\\Backend\\ExchangeRatesAPI\\ExchangeRatesAPI.csproj": {
+    "C:\\Users\\nati8\\שולחן העבודה\\ExchangeRates_Algoritech\\exchange-rates-app\\Backend\\ExchangeRatesAPI\\ExchangeRatesAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nati8\\OneDrive\\שולחן העבודה\\ExchangeRates_Algoritech\\exchange-rates-app\\Backend\\ExchangeRatesAPI\\ExchangeRatesAPI.csproj",
+        "projectUniqueName": "C:\\Users\\nati8\\שולחן העבודה\\ExchangeRates_Algoritech\\exchange-rates-app\\Backend\\ExchangeRatesAPI\\ExchangeRatesAPI.csproj",
         "projectName": "ExchangeRatesAPI",
-        "projectPath": "C:\\Users\\nati8\\OneDrive\\שולחן העבודה\\ExchangeRates_Algoritech\\exchange-rates-app\\Backend\\ExchangeRatesAPI\\ExchangeRatesAPI.csproj",
+        "projectPath": "C:\\Users\\nati8\\שולחן העבודה\\ExchangeRates_Algoritech\\exchange-rates-app\\Backend\\ExchangeRatesAPI\\ExchangeRatesAPI.csproj",
         "packagesPath": "C:\\Users\\nati8\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nati8\\OneDrive\\שולחן העבודה\\ExchangeRates_Algoritech\\exchange-rates-app\\Backend\\ExchangeRatesAPI\\obj\\",
+        "outputPath": "C:\\Users\\nati8\\שולחן העבודה\\ExchangeRates_Algoritech\\exchange-rates-app\\Backend\\ExchangeRatesAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eZdzvOIJv1o=",
+  "dgSpecHash": "sVkp2VFZt7I=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nati8\\OneDrive\\שולחן העבודה\\ExchangeRates_Algoritech\\exchange-rates-app\\Backend\\ExchangeRatesAPI\\ExchangeRatesAPI.csproj",
+  "projectFilePath": "C:\\Users\\nati8\\שולחן העבודה\\ExchangeRates_Algoritech\\exchange-rates-app\\Backend\\ExchangeRatesAPI\\ExchangeRatesAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nati8\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\nati8\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

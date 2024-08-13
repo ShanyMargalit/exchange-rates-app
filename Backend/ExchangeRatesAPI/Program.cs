@@ -26,6 +26,7 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
+// Redirect all HTTP requests to HTTPS for secure communication
 app.UseHttpsRedirection();
 
 // Enable CORS
